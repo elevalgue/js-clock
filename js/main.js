@@ -10,22 +10,23 @@ function setDate() {
   //seconds
   const seconds = now.getSeconds();
   const secondsDegrees = (seconds / 60) * 360;
-  secondHand.getElementsByClassName.transform = `rotate(${secondsDegrees}deg)`;
+  secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
   console.log(seconds);
 
   //minutes
   const minutes = now.getMinutes();
   const minutesDegrees = (minutes / 60) * 360 + 90;
-  minuteHand.getElementsByClassName.transform = `rotate(${minutesDegrees}deg)`;
+  minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
 
   console.log(minutes);
 
   //hours
   const hours = now.getHours();
   const hoursDegrees = (hours / 12) * 360 + 90;
-  hourHand.getElementsByClassName.transform = `rotate(${hoursDegrees}deg)`;
-  console.log(hourHand);
+  hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+
+  console.log(hours);
 }
 
 setInterval(setDate, 1000);
